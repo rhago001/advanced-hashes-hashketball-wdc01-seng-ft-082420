@@ -183,11 +183,11 @@ def player_numbers (name)
 
       if stats[:name] == player_name
         stats.delete(:name)
-        player_stats = stats
+       return  player_stats = stats
       end
     end
   end
-  player_stats
+  
 end
 
  
