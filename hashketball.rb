@@ -187,7 +187,7 @@ def player_numbers (name)
       end
     end
   end
-  player_stats
+  puts player_stats
 end
 
  
