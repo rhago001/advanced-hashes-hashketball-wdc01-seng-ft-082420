@@ -176,20 +176,19 @@ def player_numbers (name)
   end
 
 
-  def player_stats (name)
-    result ={}
-     game_hash.each do |location, team_info|
-    
-        team_info[:players].each do | player_info|
-          player_info.each do |key, value|
-             if player_info[value] == name
-               return result = player_info
-        
-      end 
-    end 
-     end
-    end 
+  def player_stats(player_name)
+  player_stats = {}
+  game_hash.each do |team, team_details_hash|
+    team_details_hash[:players].each do |stats|
 
+      if stats[:name] == player_name
+        stats.delete(:name)
+        player_stats = stats
+      end
+    end
+  end
+  player_stats
+end
 
  
 def team_names
